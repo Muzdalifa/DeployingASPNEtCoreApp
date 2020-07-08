@@ -3,5 +3,12 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
+  
+  <ItemGroup>
+    <ResolvedFileToPublish Include="readme.md">
+      <RelativePath>wwwroot\readme.md</RelativePath>
+    </ResolvedFileToPublish>
+    
+    <Content Update="wwwroot\**\*.txt" CopyToPublishDirectory="Never"></Content>
+  </ItemGroup>
 </Project>
