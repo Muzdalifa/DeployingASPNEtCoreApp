@@ -22,6 +22,8 @@ namespace DeployingASPNEtCoreApp
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseStartup<Startup>();
+                    /* //To host appusing kestrel add
                     webBuilder.UseStartup<Startup>()
                     .UseKestrel(options =>
                     {
@@ -30,6 +32,7 @@ namespace DeployingASPNEtCoreApp
                             ListenOptions.UseHttps("testcertificate.pfx", "testing123");
                         });
                     });
+                    */
                 });
     }
 }
